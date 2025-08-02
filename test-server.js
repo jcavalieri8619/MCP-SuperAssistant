@@ -18,10 +18,10 @@
  *   GET  /status       - Get server status
  */
 
-const http = require('http');
-const fs = require('fs');
-const path = require('path');
-const url = require('url');
+import http from 'http';
+import fs from 'fs';
+import path from 'path';
+import url from 'url';
 
 // Configuration
 const DEFAULT_PORT = 3007;
@@ -187,7 +187,7 @@ const testInterface = `
             <div class="example-message" onclick="setMessage('Can you explain quantum computing in simple terms? This is a test of the extension\\'s ability to inject complex questions.')">
                 🧠 Complex question test
             </div>
-            <div class="example-message" onclick="setMessage('Testing special characters: @#$%^&*()_+{}|:<>?[];\\',./`~')">
+            <div class="example-message" onclick="setMessage('Testing special characters: @#$%^&*()_+{}|:<>?[];\\'.,/\`~')">
                 🔣 Special characters test
             </div>
         </div>

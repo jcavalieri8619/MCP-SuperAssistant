@@ -11,8 +11,8 @@
  *   node test-client.js --examples
  */
 
-const http = require('http');
-const readline = require('readline');
+import http from 'http';
+import readline from 'readline';
 
 // Configuration
 const DEFAULT_SERVER_URL = 'http://localhost:3007';

@@ -39,7 +39,8 @@
     "module-manager": "pnpm -F module-manager start",
     "test-server": "node test-server.js",
     "test-client": "node test-client.js",
-    "test": "node test-client.js --interactive"
+    "test": "node test-client.js --interactive",
+    "demo": "node demo.js"
   },
   "dependencies": {
     "react": "19.1.0",
