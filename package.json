@@ -36,7 +36,11 @@
     "copy_env": "bash bash-scripts/copy_env.sh",
     "set-global-env": "bash bash-scripts/set_global_env.sh",
     "postinstall": "pnpm build:eslint && pnpm copy_env",
-    "module-manager": "pnpm -F module-manager start"
+    "module-manager": "pnpm -F module-manager start",
+    "test-server": "node test-server.js",
+    "test-client": "node test-client.js",
+    "test": "node test-client.js --interactive",
+    "demo": "node demo.js"
   },
   "dependencies": {
     "react": "19.1.0",

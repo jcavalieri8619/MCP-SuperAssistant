@@ -59,6 +59,9 @@ export {
 // Utility hooks (re-export existing ones)
 export { useShadowDomStyles } from './useShadowDomStyles';
 
+// Testing hooks
+export { useTestingService } from './useTestingService';
+
 // Sidebar plugin hooks
 export {
   useSidebarPlugin,
