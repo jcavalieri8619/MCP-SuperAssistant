@@ -13,6 +13,16 @@ export {
   type ToolExecutionCompleteDetail
 } from './automation.service';
 
+export {
+  TestingService,
+  testingService,
+  initializeTestingService,
+  cleanupTestingService,
+  type TestMessage,
+  type TestConfig,
+  type TestResponse
+} from './testing.service';
+
 // Export initialization function for all services
 export async function initializeAllServices(): Promise<void> {
   console.debug('[Services] Initializing all application services...');
@@ -20,7 +30,11 @@ export async function initializeAllServices(): Promise<void> {
   try {
     // Initialize automation service
     const { initializeAutomationService } = await import('./automation.service');
-    initializeAutomationService();
+    await initializeAutomationService();
+    
+    // Initialize testing service
+    const { initializeTestingService } = await import('./testing.service');
+    await initializeTestingService();
     
     console.debug('[Services] All services initialized successfully');
   } catch (error) {
@@ -37,6 +51,10 @@ export async function cleanupAllServices(): Promise<void> {
     // Cleanup automation service
     const { cleanupAutomationService } = await import('./automation.service');
     cleanupAutomationService();
+    
+    // Cleanup testing service
+    const { cleanupTestingService } = await import('./testing.service');
+    cleanupTestingService();
     
     console.debug('[Services] All services cleaned up successfully');
   } catch (error) {

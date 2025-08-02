@@ -122,6 +122,10 @@ export interface EventMap {
   
   // Test event (example from migration guide)
   'test:event': Record<string, never> | object | undefined;
+
+  // Testing framework events
+  'testing:config-changed': { enabled: boolean };
+  'testing:message-processed': { message: any; response: any };
 }
 
 // Callback for specific, named events

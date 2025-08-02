@@ -44,6 +44,9 @@ const initialUserPreferences: UserPreferences = {
   autoSubmit: false,
   autoInsert: false,   // New automation field
   autoExecute: false,  // New automation field
+  autoInsertDelay: 2,  // Default delay in seconds
+  autoSubmitDelay: 2,  // Default delay in seconds
+  autoExecuteDelay: 2, // Default delay in seconds
   notifications: true,
   theme: 'system', // Default theme
   language: navigator.language || 'en-US',
